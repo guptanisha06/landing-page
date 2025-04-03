@@ -14,26 +14,36 @@
     --p-font: 1rem;
 
 }
-body{
-    background: var(--bg-color);
-    color: var(--text-color)
+
+main{
+    width: 100%;
+    height: 100vh;
+    padding: 0 7%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    background-image: url('./images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
+
 header{
-    position:fixed;
     width:100%;
-    top:0;
-    right:0;
     z-index:1000;
-    padding: 35px 7%;
+    padding: 35px 0%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: all .50s ease;
 }
+
 .logo img{
     width: 100%;
     height: auto;
 }
+
 .navlist{
     display: flex;
 }
@@ -47,10 +57,7 @@ header{
 .navlist a:hover{
     color: var(--main-color);
 }
-.right-content{
-    display:flex;
-    align-items: center;
-}
+
 .nav-btn{
     display: inline-block;
     padding:9px 24px;
@@ -67,55 +74,16 @@ header{
     border: 2px solid var(--main-color);
     color: var(--main-color);
 }
-#menu-icon{
-    font-size: 42px;
-    z-index: 10001;
-    cursor: pointer;
-    margin-left: 25px;
-    display: none;
-}
+
 .section{
     padding: 0 14%;
 }
+
 .hero{
-    position: relative;
     width: 100%;
-    height: 100vh;
-    background: url(../img/bg.png);
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+    flex-grow: 1;
 }
-.hero-img img{
-    width: 100%;
-    height: auto;
-}
-.hero-txt h1{
-    font-size: var(--big-font);
-    font-weight: 900;
-    margin: 15px 0;
-}
-.hero-txt h5{
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-.hero-txt p{
-    width: 100%;
-    max-width: 620px;
-    font-size: var(--p-font);
-    font-weight: 400;
-    line-height: 32px;
-    color: var(--text-color);
-    margin-bottom: 40px;
-}
-.main-hero{
-    display: flex;
-    align-items: center;
-}
+
 .btn{
     display: inline-block;
     padding: 13px 32px;
@@ -143,4 +111,53 @@ color: var(--text-color);
     font-weight: 400;
     color: var(--main-color);
     margin-left: 10px;
+}
+
+
+.hero{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    gap: 5vw;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.coffeeContent{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.coffeeContent h1{
+    font-size: 5vw;
+}
+.coffeeContent p{
+    font-size: 0.85vw;
+    line-height: 1.8;
+}
+
+.ctx{
+    display: flex;
+}
+
+
+.right{
+    /* flex-grow: 1; */
+    width: 50%;
+}
+
+.right img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
